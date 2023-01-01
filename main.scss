@@ -1,0 +1,328 @@
+
+/************************************ COLORS ********************************************/
+
+$color-violet-light: hsl(256, 26%, 20%);
+$color-blue-greyish: hsl(216, 30%, 68%);
+$color-violet-dark: hsl(270, 9%, 17%);
+$color-grey-dark: hsl(273, 4%, 51%);
+$color-grey-light: hsl(0, 0%, 98%);
+
+
+
+/************************************ FONTS ********************************************/
+$font-primary:'Karla', sans-serif;
+$font-heading: 'DM Serif Display', serif;
+
+/**************************** For centering our content within 1140 px***************************/
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+/**************************** Default styling *****************************************/
+h1,h2,h3,h4,h5{
+    font-family: $font-heading;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/**************************** UNIVERSAL RESET *****************************************/
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;  //which is 10px
+    box-sizing: border-box;
+}
+body{
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-violet-light;
+    line-height: 1.6;
+}
+
+/**************************** Header starts here *****************************************/
+
+.header{
+    height: 100vh;
+    position: relative;
+    background-color: $color-violet-light;
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+        background-size: cover;
+        background-position: right;
+        width: 33rem;
+        height: 45rem;
+        top: 9rem;
+        right: 0px;
+        z-index: 1;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+        background-size: cover;
+        background-position: left;
+        width: 20rem;
+        height: 52rem;
+        top: 50rem;
+        left: 0;
+    }
+    &__flex{
+        display: flex;
+        align-items: flex-start;
+    }
+    &__textbox{
+        flex: 0 0 50%;
+        padding: 10rem 5vw;
+        & *:not(:last-child){
+            margin-bottom: 4rem;
+        }
+    }
+    &__line{
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            height: 1px;
+            width: 12rem;
+            background-color: $color-grey-light;
+        }
+    }
+    &__text{
+        font-size: 1.5rem;
+        color: $color-grey-light;
+        margin-top: -2.5rem;
+    }
+    &__photo{
+        flex: 0 0 50%;
+        position: absolute;
+        top: 15rem;
+        right: 10rem;
+    }
+    &__img{
+        width: 100%;
+    }
+}
+.heading-primary{
+    font-size: 6rem;
+    color: $color-grey-light;
+    line-height: 1;
+}
+.btn{
+    display: inline-block;
+    padding: .5rem 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    &__white{
+        color: $color-grey-light;
+        border: 1px solid $color-grey-light;
+        &:hover{
+            background-color: $color-grey-light;
+            border: 1px solid $color-violet-light;
+            color: $color-violet-dark;  
+            transition: all .5s;
+        }
+    }
+}
+.nav{
+    padding: 1rem 0;
+    background-color: $color-grey-light;
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+    }
+    &__list{
+        display: flex;
+        & > *{
+            margin-right: 2rem;
+        }
+    }
+    &__link:link,
+    &__link:visited{
+        font-size: 1.5rem;
+        color: $color-grey-dark;;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            color: $color-violet-dark;
+        }
+    }
+    
+}
+.btn__black{
+    color: $color-violet-light;
+    border: 1px solid $color-violet-light;
+    &:hover{
+        background-color: $color-violet-light;
+        border: 1px solid $color-violet-light;
+        color: $color-grey-light;  
+        transition: all .5s;
+    }
+}
+/**************************** Header ends here *****************************************/
+
+/**************************** Services section starts here *****************************************/
+.services{
+    padding: 25rem 0 10rem 0;
+    position: relative;
+    &__line{
+        position: relative;
+        margin-bottom: 4rem;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            height: 1px;
+            width: 12rem;
+            background-color: $color-blue-greyish;
+        }
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-gap: 5rem;
+    }
+    &__item{
+        & *:not(:last-child){
+            margin-bottom: 2.5rem;
+        }
+        &--text{
+            font-size: 1.5rem;
+            color: $color-grey-dark;
+        }
+    }
+}
+.heading-secondary{
+    font-size: 5.5rem;
+    color: $color-violet-light;
+    line-height: 1;
+    margin-bottom: 5rem;
+}
+.heading-tertiary{
+    font-size: 3rem;
+    color: $color-violet-light;
+    line-height: 1;
+}
+/**************************** Services section ends here *****************************************/
+
+/**************************** Works section starts here *****************************************/
+.work{
+    position: relative;
+    background-color: $color-violet-light;
+    padding: 5rem 0;
+    margin: 10rem 0;
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+        background-size: cover;
+        background-position: right;
+        width: 47rem;
+        height: 24rem;
+        top: 0;
+        right: 0;
+    }
+    &__btn{
+        z-index: 1;
+    }
+}
+.heading-4{
+    font-size: 6rem;
+    color: $color-grey-light;
+    line-height: 1;
+    line-height: 1.2;
+}
+
+/**************************** Works section ends here *****************************************/
+
+/**************************** Footer starts here *****************************************/
+.footer{
+    background-color: $color-grey-light;
+    padding: 5rem 0;
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+    &__social{
+        & *:not(:last-child){
+            margin-right: 1.5rem;
+        }
+        &--icon{ 
+            i{
+                font-size: 3rem;
+                color: $color-grey-dark;
+                &:hover{
+
+                    padding: 1rem 1rem;
+                    background-color: $color-violet-dark;
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+    &__line{
+        position: relative;
+        margin-bottom: 3rem;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color-grey-dark;
+        }
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 2rem;
+    }
+    &__nav{
+        &--list{
+            & *:not(:last-child){
+                margin-bottom: .5rem;
+            }
+        }
+        &--link{
+            color: $color-violet-dark;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        &--heading{
+            font-size: 1.5rem;
+            color: $color-grey-dark;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 3rem;
+        }
+    }
+}
+/**************************** Footer ends here *****************************************/

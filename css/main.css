@@ -1,0 +1,392 @@
+/************************************ COLORS ********************************************/
+/************************************ FONTS ********************************************/
+/**************************** For centering our content within 1140 px***************************/
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+/**************************** Default styling *****************************************/
+h1, h2, h3, h4, h5 {
+  font-family: "DM Serif Display", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**************************** UNIVERSAL RESET *****************************************/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  color: #2d2640;
+  line-height: 1.6;
+}
+
+/**************************** Header starts here *****************************************/
+.header {
+  height: 100vh;
+  position: relative;
+  background-color: #2d2640;
+  position: relative;
+}
+
+.header:before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+  background-size: cover;
+  background-position: right;
+  width: 33rem;
+  height: 45rem;
+  top: 9rem;
+  right: 0px;
+  z-index: 1;
+}
+
+.header:after {
+  content: '';
+  position: absolute;
+  background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+  background-size: cover;
+  background-position: left;
+  width: 20rem;
+  height: 52rem;
+  top: 50rem;
+  left: 0;
+}
+
+.header__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header__textbox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  padding: 10rem 5vw;
+}
+
+.header__textbox *:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.header__line {
+  position: relative;
+}
+
+.header__line:before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  height: 1px;
+  width: 12rem;
+  background-color: #fafafa;
+}
+
+.header__text {
+  font-size: 1.5rem;
+  color: #fafafa;
+  margin-top: -2.5rem;
+}
+
+.header__photo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  position: absolute;
+  top: 15rem;
+  right: 10rem;
+}
+
+.header__img {
+  width: 100%;
+}
+
+.heading-primary {
+  font-size: 6rem;
+  color: #fafafa;
+  line-height: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: .5rem 3rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn__white {
+  color: #fafafa;
+  border: 1px solid #fafafa;
+}
+
+.btn__white:hover {
+  background-color: #fafafa;
+  border: 1px solid #2d2640;
+  color: #2b272f;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav {
+  padding: 1rem 0;
+  background-color: #fafafa;
+}
+
+.nav__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__list > * {
+  margin-right: 2rem;
+}
+
+.nav__link:link, .nav__link:visited {
+  font-size: 1.5rem;
+  color: #837d87;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav__link:link:hover, .nav__link:visited:hover {
+  color: #2b272f;
+}
+
+.btn__black {
+  color: #2d2640;
+  border: 1px solid #2d2640;
+}
+
+.btn__black:hover {
+  background-color: #2d2640;
+  border: 1px solid #2d2640;
+  color: #fafafa;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+/**************************** Header ends here *****************************************/
+/**************************** Services section starts here *****************************************/
+.services {
+  padding: 25rem 0 10rem 0;
+  position: relative;
+}
+
+.services__line {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.services__line:before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  height: 1px;
+  width: 12rem;
+  background-color: #95a9c6;
+}
+
+.services__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 5rem;
+}
+
+.services__item *:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.services__item--text {
+  font-size: 1.5rem;
+  color: #837d87;
+}
+
+.heading-secondary {
+  font-size: 5.5rem;
+  color: #2d2640;
+  line-height: 1;
+  margin-bottom: 5rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  color: #2d2640;
+  line-height: 1;
+}
+
+/**************************** Services section ends here *****************************************/
+/**************************** Works section starts here *****************************************/
+.work {
+  position: relative;
+  background-color: #2d2640;
+  padding: 5rem 0;
+  margin: 10rem 0;
+}
+
+.work__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.work:after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+  background-size: cover;
+  background-position: right;
+  width: 47rem;
+  height: 24rem;
+  top: 0;
+  right: 0;
+}
+
+.work__btn {
+  z-index: 1;
+}
+
+.heading-4 {
+  font-size: 6rem;
+  color: #fafafa;
+  line-height: 1;
+  line-height: 1.2;
+}
+
+/**************************** Works section ends here *****************************************/
+/**************************** Footer starts here *****************************************/
+.footer {
+  background-color: #fafafa;
+  padding: 5rem 0;
+}
+
+.footer__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.footer__social *:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.footer__social--icon i {
+  font-size: 3rem;
+  color: #837d87;
+}
+
+.footer__social--icon i:hover {
+  padding: 1rem 1rem;
+  background-color: #2b272f;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.footer__line {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.footer__line:before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #837d87;
+}
+
+.footer__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.footer__nav--list *:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.footer__nav--link {
+  color: #2b272f;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.footer__nav--heading {
+  font-size: 1.5rem;
+  color: #837d87;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+/**************************** Footer ends here *****************************************/
+/*# sourceMappingURL=main.css.map */
